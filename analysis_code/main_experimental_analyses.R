@@ -679,7 +679,7 @@ avp_outputs = ggplot(average_dat_outputs, aes(x=trial_difficulty, y=mean_diff)) 
               geom_boxplot(width = 0.1) +
               geom_hline(yintercept = 0, linetype = "dashed") + 
               scale_y_continuous(limits = c(-7,10), breaks = c(-5, 0, 5, 10), labels = c("-5%", "0%\n(no effect)", "+5%", "+10%")) +
-              xlab("Trial target difficulty\n(percentage of participant's handgrip strength)") +
+              xlab("Trial target difficulty\n(percentage of participant's maximum handgrip strength)") +
               ylab("Mean effect of support figure face (versus stranger face) on handgrip outputs") + 
               coord_flip() + 
               scale_fill_manual(values = diff_cols_g_y_r) +
