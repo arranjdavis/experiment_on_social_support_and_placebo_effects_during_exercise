@@ -583,7 +583,7 @@ mean_data$trial_difficulty = factor(mean_data$trial_difficulty, levels = c("60% 
 grip_by_difficulty = ggplot(na.omit(mean_data), aes(x = sample_reading_number, y = volt_mean, colour = trial_difficulty)) + 
                      geom_point() + geom_line() + 
                      scale_color_manual(values = diff_cols_r_y_g) +
-                     ylab("Mean percentage of maximum handgrip strength") + xlab("Time (handgrip strength reading number)") + labs(color = "Target handgrip strength") +
+                     ylab("Mean percentage of participant maximum handgrip strength") + xlab("Time (handgrip strength reading number)") + labs(color = "Target handgrip strength") +
                      geom_hline(yintercept=c(40, 50, 60), linetype="dotted", color = diff_cols_g_y_r) + 
                      scale_y_continuous(breaks=c(0,10,20,30,40,50,60), labels = c("0%", "10%", "20%", "30%", "40%", "50%", "60%")) +
                      scale_x_continuous(breaks = seq(0,160,10)) +
