@@ -587,10 +587,10 @@ grip_by_difficulty = ggplot(na.omit(mean_data), aes(x = sample_reading_number, y
                      geom_hline(yintercept=c(40, 50, 60), linetype="dotted", color = diff_cols_g_y_r) + 
                      scale_y_continuous(breaks=c(0,10,20,30,40,50,60), labels = c("0%", "10%", "20%", "30%", "40%", "50%", "60%")) +
                      scale_x_continuous(breaks = seq(0,160,10)) +
-                     original_theme
+                     original_theme + theme(legend.key=element_blank())
 
 #save the plot
-ggsave("mean_grip_strength_by_trial_difficulty_target.jpeg", grip_by_difficulty, width = 10, height = 7.5)
+ggsave("mean_handgrip_outputs_over_time_by_trial_target_difficulty.jpeg", grip_by_difficulty, width = 10, height = 7.5)
 
 ################################################################################################################################################
 
@@ -687,7 +687,7 @@ avp_outputs = ggplot(average_dat_outputs, aes(x=trial_difficulty, y=mean_diff)) 
               original_theme 
 
 #save the plot
-ggsave("average_social_support_effect_by_trial_difficulty_target.jpg", avp_outputs, width = 10, height = 7.5)
+ggsave("average_social_support_effect_on_handgrip_outputs_by_trial_target_difficulty.jpeg", avp_outputs, width = 10, height = 7.5)
 
 ################################################################################################################################################
 
@@ -709,7 +709,7 @@ vp_difficulty = ggplot(average_dat_difficulty, aes(x = as.factor(session_number)
                 original_theme
 
 #save the plot
-ggsave("perceived_difficulty_by_exercise_block_and_placebo_condition.jpg", vp_difficulty, width = 10, height = 7.5, units = "in")
+ggsave("perceived_difficulty_by_exercise_block_and_placebo_condition.jpeg", vp_difficulty, width = 10, height = 7.5, units = "in")
 
 ################################################################################################################################################
 
