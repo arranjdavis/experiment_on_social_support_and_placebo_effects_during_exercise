@@ -1,19 +1,20 @@
 LEVEL-ONE MULTICOLLINEARITY
-Variance inflation factor (VIF) mean: 4.19251876133212
-VIF range: 1.00390670735714, 17.3662194141826
-VIF for social support condition predictor: 2.0096332818965
-VIF for placebo condition predictor: 2.01042043298722
-VIF for target trial difficulty condition predictor: 17.3662194141826
-VIF for exercise block predictor: 1.00390670735714
-VIF for exercise trial number predictor: 1.08087725446572
+Variance inflation factor (VIF) mean: 1.24
+VIF range: 1, 2.03
+VIF for the social support condition predictor: 1
+VIF for the placebo condition predictor: 1.01
+VIF for the trial target difficulty predictor: 1.33
+VIF for the exercise block predictor: 1
+VIF for the exercise sub-block predictor: 1.08
+VIF for the reported effort predictor: 2.03
 
 LEVEL-TWO RESIDUAL NORMALITY
-Shapiro-Wilks test of level-two residual normality: W = 0.810074328191211, p = 3.2348974341569e-08
+Shapiro-Wilks test of level-two residual normality: W = 0.81, p = 3.06094222282382e-08
 
 LEVEL-TWO UNIT INFLUENCE
-Mean Cook's distances: 0.0382653949501416
-Standard deviation of Cook's distances: 0.0727989320278441
-Minimum Cook's distance: 0.00278599220734365
-Maximum Cook's distance: 0.497086367925267
-Percentage of level-two units with potentially problematic Cook's distances (greater than 1; Field et al., 2014): 0
-Percentage of level-two units with potentially problematic Cook's distances (greater than 4/n; Nieuwenhuis et al., 2012): 16.667
+Mean Cook's distances: 0.05
+Standard deviation of Cook's distances: 0.1
+Minimum Cook's distance: 0
+Maximum Cook's distance: 0.7
+Number (and percentage) of level-two units with potentially problematic Cook's distances (greater than 1; Field et al., 2014): 0 (0%)
+Number (and percentage) of level-two units with potentially problematic Cook's distances (greater than 4/n; Nieuwenhuis et al., 2012): 12 (16.67%)

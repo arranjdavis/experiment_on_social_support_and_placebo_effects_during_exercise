@@ -1,0 +1,24 @@
+LEVEL-ONE HOMOSCEDASTICITY
+Homoscedasticity test statistic (H): 83414.57
+Homoscedasticity test degrees of freedom: 71
+Homoscedasticity test p-value (significance indicates heteroscedasticity): 0
+
+LEVEL-ONE MULTICOLLINEARITY
+Variance inflation factor (VIF) mean: 1.15
+VIF range: 1, 1.45
+VIF for the social support condition predictor: 1
+VIF for the placebo condition predictor: 1
+VIF for the trial target difficulty predictor: 1.37
+VIF for the exercise block predictor: 1
+VIF for the exercise sub-block predictor: 1.08
+VIF for the reported effort predictor: 1.45
+
+LEVEL-TWO UNIT INFLUENCE
+Mean Cook's distances: 1.17
+Standard deviation of Cook's distances: 3.69
+Minimum Cook's distance: 0.03
+Maximum Cook's distance: 31.21
+Number (and percentage) of level-two units with potentially problematic Cook's distances (greater than 1; Field et al., 2014): 16 (22.22%)
+Number (and percentage) of level-two units with potentially problematic Cook's distances (greater than 4/n; Nieuwenhuis et al., 2012): 70 (97.22%)
+Percentage of level-two units that, if removed from the model, would change the significance of the 'main effect' of social support: 0%
+Percentage of level-two units that, if removed from the model, would change the significance of the social support by trial target difficulty condition interaction: 0%
