@@ -466,14 +466,14 @@ check_influence = function(lme_model, level_two_variable){
   }
   
   cat("\n", "LEVEL-TWO UNIT INFLUENCE", file = 'assumption_tests.txt', append=TRUE, sep = "\n")
-  cat(paste("Mean Cook's distances:", cooks_distance_mean), file = 'assumption_tests.txt', append=TRUE, sep = "\n")
-  cat(paste("Standard deviation of Cook's distances:", cooks_distance_sd), file = 'assumption_tests.txt', append=TRUE, sep = "\n")
-  cat(paste("Minimum Cook's distance:", cooks_distance_range[1]), file = 'assumption_tests.txt', append=TRUE, sep = "\n")
-  cat(paste("Maximum Cook's distance:", cooks_distance_range[2]), file = 'assumption_tests.txt', append=TRUE, sep = "\n")
+  cat(paste("Mean Cook's distances:", round(cooks_distance_mean, digits = 2)), file = 'assumption_tests.txt', append=TRUE, sep = "\n")
+  cat(paste("Standard deviation of Cook's distances:", round(cooks_distance_sd, digits = 2)), file = 'assumption_tests.txt', append=TRUE, sep = "\n")
+  cat(paste("Minimum Cook's distance:", round(cooks_distance_range[1], digits = 2)), file = 'assumption_tests.txt', append=TRUE, sep = "\n")
+  cat(paste("Maximum Cook's distance:", round(cooks_distance_range[2], digits = 2)), file = 'assumption_tests.txt', append=TRUE, sep = "\n")
   
-  cat(paste("Percentage of level-two units with potentially problematic Cook's distances (greater than 1; Field et al., 2014):", round(((count/obvs)*100), digits = 3)),
+  cat(paste0("Number (and percentage) of level-two units with potentially problematic Cook's distances (greater than 1; Field et al., 2014): ", count, " (", round(((count/obvs)*100), digits = 2), "%)"),
       file = 'assumption_tests.txt', append=TRUE, sep = "\n")
-  cat(paste("Percentage of level-two units with potentially problematic Cook's distances (greater than 4/n; Nieuwenhuis et al., 2012):", round(((count_nieuwenhuis/obvs)*100), digits = 3)),
+  cat(paste0("Number (and percentage) of level-two units with potentially problematic Cook's distances (greater than 4/n; Nieuwenhuis et al., 2012): ", count_nieuwenhuis, " (", round(((count_nieuwenhuis/obvs)*100), digits = 2), "%)"),
       file = 'assumption_tests.txt', append=TRUE, sep = "\n")
   
 }
