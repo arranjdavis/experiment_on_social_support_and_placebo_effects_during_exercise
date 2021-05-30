@@ -1449,7 +1449,7 @@ cat(paste("\nVIF for the reported effort predictor:", round(vif(tobit_Q2)[c(1:6)
 #get the random intercepts for the model
 mod_re = ranef(Q2_results_full_model, condVar = TRUE, standard = TRUE)
 
-#get a dataset of all non-standardized Empirical Bayes (EB) residuals (use this for level-two fixed effects; Snijders & Bosker, 2012; p. 64)
+#get a data set of all non-standardized Empirical Bayes (EB) residuals (use this for level-two fixed effects; Snijders & Bosker, 2012; p. 64)
 postmean = mod_re$Participant[,1]
 
 #posterior variances
