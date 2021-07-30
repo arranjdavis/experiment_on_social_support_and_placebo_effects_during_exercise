@@ -940,7 +940,7 @@ mean_data$trial_difficulty = factor(mean_data$trial_difficulty, levels = c("60% 
 grip_by_time_by_difficulty = ggplot(na.omit(mean_data), aes(x = sample_reading_number, y = volt_mean, colour = trial_difficulty)) + 
                                geom_point() + geom_line() + 
                                scale_color_manual(values = diff_cols_r_y_g) +
-                               ylab("Mean percentage of participant maximum handgrip strength") + xlab("Time (handgrip strength reading number)") + labs(color = "Target handgrip strength") +
+                               ylab("Mean percentage of participant maximum handgrip strength") + xlab("Time (handgrip strength reading number)") + labs(color = "Trial target difficulty") +
                                geom_hline(yintercept=c(40, 50, 60), linetype="dotted", color = diff_cols_g_y_r) + 
                                scale_y_continuous(breaks=c(0,10,20,30,40,50,60), labels = c("0%", "10%", "20%", "30%", "40%", "50%", "60%")) +
                                scale_x_continuous(breaks = seq(0,160,10)) +
@@ -954,11 +954,13 @@ ggsave("mean_handgrip_outputs_over_time_by_trial_target_difficulty.jpeg", grip_b
 ### HISTOGRAM OF PARTICIPANTS' ANSWERS TO THE POST-TRIAL QUESTION ON HOW HARD THE PREVIOUS TRIAL WAS ###
 
 #plot the data
-perceived_difficulty_hist = ggplot(data = question_data, aes(x = Q2_ans_perc)) + 
-                            geom_histogram(binwidth=1, color = "black", fill = "grey") + 
-                            ylab("Count") + xlab("Percent of sliding scale") + 
+perceived_difficulty_hist = ggplot(question_data, aes(as.integer(Q2_ans_perc))) + 
+                            geom_bar(aes(y = (..count..)/sum(..count..))) + 
+                            ylab("Percentage of total observations") + xlab("Percent of sliding scale") + 
                             scale_x_continuous(breaks = seq(0,100,10), 
                                                labels = c("0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%")) +
+                            scale_y_continuous(breaks = seq(0,.10,.02), 
+                                               labels = c("0%", "2%", "4%", "6%", "8%", "10%")) +
                             original_theme
 
 #save the plot
