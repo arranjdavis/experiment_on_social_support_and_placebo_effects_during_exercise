@@ -1,4 +1,4 @@
-This repository contains all the scripts and data needed to reproduce the analyses presented in the manuscript "Effects of social support on performance outputs and perceived difficulty during physical exercise", [published in Physiology & Behavior](https://www.sciencedirect.com/science/article/pii/S0031938421001803).
+This repository contains all the scripts and data needed to reproduce the analyses presented in the manuscript "_Effects of social support on performance outputs and perceived difficulty during physical exercise_", [published in Physiology & Behavior](https://www.sciencedirect.com/science/article/pii/S0031938421001803).
 
 To replicate the analyses, please follow these steps:
 
